@@ -138,8 +138,9 @@ function makeLog(guild, type, message) {
             }});
         }
         catch (err) {
-            console.info("[ error ]", `Failed to log for ${type} channel in ${guild}.`);
-        }
-    }
+            console.error(error);
+            console.info(`Failed to log for ${type} channel in ${guild}.`);
+        },
+    };
     console.info("[  log  ]", `Type: ${type}, Guild: ${guild} > ${message}`);
-}
+};
